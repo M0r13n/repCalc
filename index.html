@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smartphoniker Smartphonerechner</title>
+    <meta name="description" content="Wie viel CO2 spart dich die Reparatur deines Smartphones?">
+    <meta name="author" content="Leon Morten Richter">
+    <link rel="stylesheet" href="mvp.css?v=1">
+    <link rel="stylesheet" href="main.css?v=1">
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <nav>
+                <img alt="Smartphoniker logo" src="./res/logo.svg" height="70">
+            </nav>
+
+            <h1>Was bringt eine Reparatur gegenüber einem Neukauf?</h1>
+            <p>Eine Reparatur kann die Lebenszeit deines Smartphones drastisch verlängern. Das <mark>schont den Geldbeutel und die Umwelt.</mark></p>
+        </header>
+
+
+
+        <section id="devices">
+            <header>
+                <h2>Wähle dein Gerät</h2>
+            </header>
+        </section>
+
+        <!--<section>
+                <header>
+                    <h2>Wähle die Art der Reparatur</h2>
+                </header>
+                <p>
+                    <select id="repair">
+                    <option value="battery">Akkutausch</option>
+                    <option value="display">Display</option>
+                    <option value="misc">Sonstige</option>
+                </select>
+                </p>
+            </section> -->
+
+
+        <section id="results">
+            <hr>
+            <aside>
+                <img alt="HTML only" src="./res/co2.png" height="150">
+                <h3><b><span id="co2" class="counter">0</span> kg</b> CO2<sup>1,2</sup></h3>
+                <p>Die Reparatur eines Smartphones verlängert die Nutzungszeit. Da die Produktion mit Abstand am meisten CO2 verbaucht, kann so viel gespart werden.
+                </p>
+            </aside>
+            <aside>
+                <img alt="HTML only" src="./res/piggy-bank.png" height="150">
+                <h3><b><span id="priceLowest" class="counter">0</span> bis <span id="priceHighest" class="counter">0</span> €</b> Ersparnis<sup>3</sup></h3>
+                <p>Eine Reparatur ist in aller Regel günstiger als die Anschaffung eines vergleichbaren Neugeräts.
+                </p>
+            </aside>
+            <aside>
+                <img alt="HTML only" src="./res/period.png" height="150">
+                <h3><b>~ <span id="ressources" class="counter">0</span> g</b> Rohstoffe<sup>4</sup></h3>
+                <p>Die Menge an Rohstoffen mag für ein einzelnes Gerät gering erscheinen. Doch die Folgen des Abbaus sind bei milliarden Geräten durchaus signifitkant.
+                </p>
+            </aside>
+        </section>
+
+        <section>
+            <hr>
+            <header>
+                <h2>Wie viel CO2 wird während des gesamten Lebenszyklus verbaucht?<sup>1</sup></h2>
+                <p><i>Herstellung <span id="production">73</span>% &nbsp;</i> <progress max="100" value="73" id="productionVal"></progress></p>
+                <p><i>Nutzung <span id="usage">19</span>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i> <progress max="100" value="19" id="usageVal"></progress></p>
+                <p><i>Vertrieb <span id="transport">6</span>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i> <progress max="100" value="6" id="transportVal"></progress></p>
+                <p><i>Recyling <span id="recycling">2</span>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i> <progress max="100" value="2" id="recyclingVal"></progress></p>
+            </header>
+
+
+        </section>
+
+        <section>
+            <hr>
+            <header>
+                <h2>Was steckt in meinem Gerät?<sup>4</sup></h2>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Verwendung</th>
+                        <th>Ersparnis pro Smartphone (g)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aluminium (<b>AI</b>)</td>
+                        <td>Gehäuse</td>
+                        <td>22.18</td>
+                    </tr>
+                    <tr>
+                        <td>Kupfer (<b>Cu</b>)</td>
+                        <td>Kabel, Leiter</td>
+                        <td>15.12</td>
+                    </tr>
+                    <tr>
+                        <td>Plastik (---)</td>
+                        <td>Gehäuse, Verpackung</td>
+                        <td>9.53</td>
+                    </tr>
+                    <tr>
+                        <td>Kobalt (<b>Co</b>)</td>
+                        <td>Akku</td>
+                        <td>5.38</td>
+                    </tr>
+                    <tr>
+                        <td>Wolfram (<b>W</b>)</td>
+                        <td>Diverses</td>
+                        <td>0.44</td>
+                    </tr>
+                    <tr>
+                        <td>Silber (<b>Ag</b>)</td>
+                        <td>Platine</td>
+                        <td>0.31</td>
+                    </tr>
+                    <tr>
+                        <td>Gold (<b>Au</b>)</td>
+                        <td>Platine</td>
+                        <td>0.03</td>
+                    </tr>
+                    <tr>
+                        <td>Neodym (<b>Nd</b>)</td>
+                        <td>Lautsprecher</td>
+                        <td>0.05</td>
+                    </tr>
+                    <tr>
+                        <td>Indium (<b>In</b>)</td>
+                        <td>Display</td>
+                        <td>0.01</td>
+                    </tr>
+                    <tr>
+                        <td>Palladium (<b>Pd</b>)</td>
+                        <td>PCB</td>
+                        <td>0.01</td>
+                    </tr>
+                    <tr>
+                        <td>Gallium (<b>Ga</b>)</td>
+                        <td>Bildschirm</td>
+                        <td>0.0004</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <footer>
+        <hr>
+        <sup>1</sup> <a href="https://reboxed.co/blogs/outsidethebox/the-carbon-footprint-of-your-phone-and-how-you-can-reduce-it"> Quelle</a><br>
+        <sup>2</sup> Die Kategorie Sonstige basiert auf gemittelten Werten. Die tatsächlichen Emmissionen können abweichen.<br>
+        <sup>3</sup> Die Ersparnis berechnet sich aus dem aktuellen Neupreis (Stand 09/2021) abzüglich möglicher Reparaturkosten.<br>
+        <sup>4</sup> Die Daten stammen aus einem Bericht von <a href=https://www.greenpeace.de/sites/www.greenpeace.de/files/publications/s01981_greenpeace_report_10_jahre_smartphone.pdf>Greenpeace</a><br>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+    <script src="main.js"></script>
+</body>
